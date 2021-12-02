@@ -2,8 +2,7 @@ let number;
 let attempts;
 let deattempts;
 
-resetGame();
-tryGuessNumber();
+
 
 const isNumber = (x) => {
     return !isNaN(parseFloat(x)) && isFinite(x);
@@ -57,3 +56,6 @@ function tryGuessNumber() {
 
     tryGuessNumber();
 }
+
+resetGame();
+tryGuessNumber();
