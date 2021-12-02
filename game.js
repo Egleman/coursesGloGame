@@ -22,8 +22,12 @@ function tryGuessNumber() {
         return;
     }
     
-    if (Number.isNaN(userAnswer) || userAnswer < 0 || userAnswer > 100) {
+    if (Number.isNaN(userAnswer)) {
         alert('Необходимо ввести целое число от 0 до 100');
+        tryGuessNumber();
+        return;
+    } else if (userAnswer < 0 || userAnswer > 100) {
+        alert('Вы ввели число выходящие за пределы допустимых (меньше 0 или больше 100)');
         tryGuessNumber();
         return;
     }
