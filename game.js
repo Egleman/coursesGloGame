@@ -22,7 +22,7 @@ function tryGuessNumber() {
         return;
     }
     
-    if (Number.isNaN(userAnswer)) {
+    if (Number.isNaN(userAnswer) || userAnswer < 0 || userAnswer > 100) {
         alert('Необходимо ввести целое число от 0 до 100');
         tryGuessNumber();
         return;
