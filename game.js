@@ -15,7 +15,7 @@ function resetGame() {
 }
 
 function tryGuessNumber() {
-    const userAnswer = prompt(`Введите число от 0 до 100, для выхода напишите -1. Количество попыток: ${deattempts}`);
+    const userAnswer = prompt(`Введите число от 0 до 100, для выхода нажмите "Отмена". Количество попыток: ${deattempts}`);
 
     if (userAnswer === null) {
         alert('До свидания!');
