@@ -15,7 +15,7 @@ function resetGame() {
 }
 
 function tryGuessNumber() {
-    const userAnswer = prompt(`Введите число от 0 до 100, для выхода нажмите "Отмена". Количество попыток: ${deattempts}`);
+    const userAnswer = +prompt(`Введите число от 0 до 100, для выхода нажмите "Отмена". Количество попыток: ${deattempts}`);
 
     if (userAnswer === null) {
         alert('До свидания!');
@@ -49,7 +49,7 @@ function tryGuessNumber() {
         alert("Попробуйте число поменьше");
     } else if (userAnswer < number) {
         alert('Попробуйте число побольше');
-    } else {
+    } else if (userAnswer == number) {
         alert(`Поздравляю, вы отгодали число с ${attempts} попытки`);
         if(!confirm('Хоnите сыграть ещё раз?')) {
             alert('До свидания!');
